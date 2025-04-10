@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>RealPlayer 5.0 Simulator</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<div class="realplayer-window">
+  <div class="title-bar">
+    <div class="left-content">
+      <img src="/img/Real_Logo.webp" height="16" alt="real">
+      <span>RealPlayer</span>
+    </div>
+  
+    <div class="right-content">
+      <button onclick="minimizeWindow()">_</button>
+      <button onclick="closeWindow()">×</button>
+    </div>
+  </div>
+
+  <div class="menu-bar">
+    <span>File</span><span>View</span><span>Clip</span><span>Sites</span><span>Help</span>
+  </div>
+
+  <div class="control-panel">
+    <button id="playPauseBtn" onclick="togglePlayPause()">
+      <span id="playIcon"><img src="/img/image_part_001.png" height="22" alt="play"></span>
+      <span><img src="/img/Slash.svg.png" height="12" alt=""></span>
+      <span id="pauseIcon"><img src="/img/image_part_002.png" height="22" alt="pause"></span>
+    </button>
+  
+    <button onclick="stopVideo()">
+      <img src="/img/stop.png" height="22" alt="stop">
+    </button>
+
+    <div class="progress-container" onclick="seekVideo(event)">
+      <div id="videoProgress" class="progress-bar"></div>
+    </div>
+  
+    <button><img src="/img/left.png" alt=""></button>
+    <button><img src="/img/right.png" alt=""></button>
+  
+    <img src="/img/rp90.webp" alt="RealPlayer Logo">
+  </div>
+
+  <div class="screen">
+    <video id="video" preload="metadata">
+      <source src="/video/Hotline Miami - Official Trailer.mp4" type="video/mp4">
+      Ваш браузер не поддерживает видео.
+    </video>
+  </div>
+
+  <div class="fake-tabs">
+    <div>News</div>
+    <div>Biz/Tech</div>
+    <div>Sports</div>
+    <div>Entertainment</div>
+    <div>Music</div>
+    <div>Daily Briefing</div>
+  </div>
+
+
+
+  <div class="bottom-info">
+    <span>Stereo</span>
+    <span id="status">Stopped</span>
+    <span id="time">00:00 / 00:00</span>
+  </div>
+</div>
+
+<script src="/js/script.js"></script>
+</body>
+</html>
